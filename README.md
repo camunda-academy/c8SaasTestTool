@@ -13,14 +13,13 @@ Any Windows, Linux, Mac computers.
 
 ## How to Use
 
-1. Download the project
-2. Ask Camunda training organizers for the envVars.txt file
-3. Place the envVars.txt in the folder root.
-4. From the root directory of this project:
-5. Run the script:
+1. Download the last release related to this github project (zip file)
+2. Extract its content with the password provided by Camunda
+3. From the root directory of this project:
+4. Run the script:
    - **Windows**: Open PowerShell and run `./testConnection.ps1`
    - **Mac/Unix**: Open the terminal and run `chmod u+x testConnection.sh && ./testConnection.sh`
-6. Review the result for success or failure.
+5. Review the result for success or failure.
 
 ## Connection Result
 
