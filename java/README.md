@@ -3,16 +3,18 @@
 ## Requirements
 
 - **Java 17 or higher** (check with `java -version`)
-- **Maven 3.x** (for building)
-- **No additional dependencies needed** - fat JAR includes all dependencies
+- **Maven 3.x** (for building the project)
+- **Internet connection** (Maven will download Camunda client and dependencies during build)
 
 ## Build
+
+Build the project (this will download all required dependencies):
 
 ```bash
 mvn clean package
 ```
 
-This creates `target/testConnection.jar` with all dependencies bundled.
+This creates `target/testConnection.jar` - a fat JAR with all dependencies bundled.
 
 ## Usage
 
@@ -70,21 +72,6 @@ java -Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8080 \
 
 **"Authentication error"**
 - Verify credentials in `envVarsExtended.txt`
-
-## Creating Release
-
-To create a release package for trainees:
-
-```bash
-# From java/ directory
-cd ..
-tar -czf c8-saas-test-tool-java.tar.gz \
-  java/envVarsExtended.txt \
-  java/target/testConnection.jar \
-  java/testConnection.sh \
-  java/testConnection.ps1 \
-  java/README.md
-```
 
 Trainees extract and run with:
 - Mac/Linux: `./testConnection.sh`
