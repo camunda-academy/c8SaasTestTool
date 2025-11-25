@@ -2,6 +2,7 @@
 private/
 envVarExamples
 envVars.txt
+envVarsExtended.txt
 copilot.context
 
 # Python
