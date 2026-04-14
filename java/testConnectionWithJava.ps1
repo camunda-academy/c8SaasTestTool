@@ -25,15 +25,6 @@ if (-not (Test-Path $jarFile)) {
     Print-Error "JAR file not found. Please run 'mvn package' first to build the project."
 }
 
-# Change to the java directory if we're in the root
-if ((Test-Path "envVars.txt") -and (Test-Path "java")) {
-    Set-Location "java"
-    if (-not $?) {
-        Print-Error "Cannot access java directory"
-    }
-    $jarFile = "target\testConnection.jar"
-}
-
 # Run the Java application
 Write-Host "Starting Camunda 8 SaaS connection test..."
 try {

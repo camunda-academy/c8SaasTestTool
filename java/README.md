@@ -5,6 +5,7 @@
 - **Java 17 or higher** (check with `java -version`)
 - **Maven 3.x** (for building the project)
 - **Internet connection** (Maven will download Camunda client and dependencies during build)
+- **`envVarsExtended.txt`** — cluster credentials file. To get it: log in to [camunda.io](https://camunda.io), select your cluster → **API** → **Orchestration cluster API**, then download the credentials using the **Env Vars** format. Place the file in the `java/` directory.
 
 ## Build
 
@@ -20,12 +21,12 @@ This creates `target/testConnection.jar` - a fat JAR with all dependencies bundl
 
 **Mac/Linux:**
 ```bash
-./testConnection.sh
+./testConnectionWithJava.sh
 ```
 
 **Windows:**
 ```powershell
-.\testConnection.ps1
+.\testConnectionWithJava.ps1
 ```
 
 **Direct:**
@@ -74,5 +75,5 @@ java -Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8080 \
 - Verify credentials in `envVarsExtended.txt`
 
 Trainees extract and run with:
-- Mac/Linux: `./testConnection.sh`
-- Windows: `.	estConnection.ps1`
+- Mac/Linux: `./testConnectionWithJava.sh`
+- Windows: `.\testConnectionWithJava.ps1`
