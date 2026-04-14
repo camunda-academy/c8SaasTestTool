@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 private/
 envVarExamples
 envVars.txt

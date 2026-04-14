@@ -27,12 +27,6 @@ if [ ! -f "$JAR_FILE" ]; then
     print_error "JAR file not found. Please run 'mvn package' first to build the project."
 fi
 
-# Change to the java directory if we're in the root
-if [ -f "envVars.txt" ] && [ -d "java" ]; then
-    cd java || print_error "Cannot access java directory"
-    JAR_FILE="target/testConnection.jar"
-fi
-
 # Run the Java application
 echo "Starting Camunda 8 SaaS connection test..."
 $JAVA_CMD -jar "$JAR_FILE"
